@@ -1,0 +1,9 @@
+{
+  "name": "Rafael",
+  "surname": "Neukirchen",
+  "company": "Toptal",
+  "function": "Desenvolvedor",
+  "age": "22",
+  "technologies": ["ReactJS", "Typescript", "NextJS", "TailwindCSS"],
+  "achievements": ["Desenvolvedor aos 17 anos.", "Primeiro projeto pessoal desenvolvido ao lado de colegas para automação de tanques de aquicultura.", "Desenvolvedor pelo GrupoW por 2 anos.", "Desenvolvedor pela Toptal a um mês."]
+}

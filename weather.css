@@ -1,0 +1,11 @@
+.content a {
+    text-decoration: none;
+    color: goldenrod;
+    transition: color 0.3s;
+}
+
+.content a:hover {
+    transition: color 0.3s;
+    text-decoration: none;
+    color: #c4941c;
+}

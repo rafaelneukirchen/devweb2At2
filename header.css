@@ -1,0 +1,23 @@
+.reference a {
+  font-size: 18px;
+  font-style: normal;
+  line-height: 120%;
+  text-decoration: none;
+  padding: 0 24px;
+  transition: 0.3s ease;
+  color: #fefefe;
+}
+
+.reference a:hover {
+    transition: 0.3s ease;
+    color: goldenrod;
+}
+
+header > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  padding: 24px 0;
+  border-bottom: 1px solid #aaa;
+}

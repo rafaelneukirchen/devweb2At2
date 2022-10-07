@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap");
+
+@keyframes from-top {
+  from {
+    margin-top: -100px;
+    opacity: 0;
+  }
+  
+  to {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+.body {
+  background: #fffafa;
+  min-height: 40vh;
+  border-radius: 0 100px 0 100px;
+  padding: 48px;
+}
+
+.body h1 {
+  color: #333;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: "Abyssinica SIL", serif !important;
+  margin-bottom: 32px;
+}
+
+.body h1 span {
+  color: goldenrod;
+}
+
+.body p {
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.body .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.body .row div {
+  width: 50%;
+  position: relative;
+}
+
+.body .row > div:nth-child(2) img {
+  padding: 0 48px;
+  width: calc(100% - 96px);
+  border-radius: 100%;
+}
+
+p.resume {
+  margin-bottom: 24px;
+}
+
+#achievements.from-top{
+  animation: from-top 0.3s;
+}
+
+.body div.socials {
+  position: absolute !important;
+  bottom: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.body div.socials .block {
+  width: 25%;
+  text-align: center;
+}
+
+.block a {
+  text-decoration: none;
+  color: goldenrod;
+  transition: color 0.3s;
+}
+
+.block a:hover {
+  transition: color 0.3s;
+  text-decoration: none;
+  color: #c4941c;
+}

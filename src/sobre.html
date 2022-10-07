@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meteorological Dev - Sobre</title>
+  <link href="../global.css" rel="stylesheet" />
+  <link href="../sobre.css" rel="stylesheet" />
+  <link rel="icon" href="/images/ico.ico" />
+  <link href="../header.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <div>
+      <div class="reference">
+        <a href="./index.html">Meteorological Dev</a>
+      </div>
+      <div class="reference"><a href="./weather.html">Weather</a></div>
+      <div class="reference"><a href="./sobre.html">Sobre</a></div>
+    </div>
+  </header>
+  <main>
+    <div class="body">
+      <div class="row">
+        <div>
+          <h1>Olá! Eu sou <span id="nome"></span>!</h1>
+          <p class="resume">
+            Sou <span id="function"></span> atualmente pela
+            <span id="company"></span>, tenho <span id="age"></span> anos e
+            minhas principais conquistas foram: <br />
+          <p id="achievements"></p>
+
+          <div class="socials">
+            <div class="block"><a target="_blank" href="https://www.instagram.com/fael_lo/">Instagram</a><img /></div>
+            <div class="block"><a target="_blank" href="https://www.facebook.com/rafael.neukirchen.5/">Facebook</a><img /></div>
+            <div class="block"><a target="_blank" href="https://github.com/rafaelneukirchen">Github</a><img /></div>
+            <div class="block"><a target="_blank" href="https://wa.link/hei3rr">Whatsapp</a><img /></div>
+          </div>
+          </p>
+        </div>
+        <div class="image"><img
+            src="https://scontent.ffln5-1.fna.fbcdn.net/v/t1.18169-9/15135742_1244138412344285_6443131616794859015_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=174925&_nc_ohc=B3h4HFP2jEkAX-jDllF&_nc_ht=scontent.ffln5-1.fna&oh=00_AT8y82OCHQQeHiwzOtrFKBsyHu7Gw3y45T91WGw4d0meNQ&oe=6363A935">
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+<script>
+  var values = [];
+  let a = fetch("../aboutme.json")
+    .then((response) => response.json())
+    .then((json) => {
+      document.querySelector("#nome").innerHTML = `${json.name} ${json.surname}`;
+      document.querySelector("#function").innerHTML = json.function;
+      document.querySelector("#company").innerHTML = json.company;
+      document.querySelector("#age").innerHTML = json.age;
+
+      setInterval(() => {
+        const rndInt = Math.floor(Math.random() * 4);
+        const achievements = document.querySelector("#achievements");
+        achievements.classList.add('from-top');
+        achievements.innerHTML = json.achievements[rndInt];
+        setTimeout(() => {
+          achievements.classList.remove('from-top');
+        }, 1500);
+
+      }, 3000);
+    });
+</script>
+
+</html>
